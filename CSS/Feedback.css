@@ -1,0 +1,40 @@
+main {
+  text-align: center;
+}
+
+.title {
+  font-size: 90px;
+}
+
+.description {
+  font-size: 40px;
+  padding-top: 1em;
+}
+
+hr {
+  color: red;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+#your-feedback {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  width: 500px;
+}
+
+.rating-container {
+  margin-top: 2em;
+}
+
+.feedback {
+  font-size: 40px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#your-feedback::placeholder {
+  font-size: 20px;
+  font-style: italic;
+}
