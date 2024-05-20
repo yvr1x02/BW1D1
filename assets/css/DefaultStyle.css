@@ -1,5 +1,5 @@
 body {
-  background-image: url(../images/bg.jpg);
+  background-image: url(/assets/images/bg.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   background-size: cover;
@@ -21,7 +21,7 @@ header {
 }
 
 .logo {
-  content: url(../images/epicode_logo.png);
+  content: url(/assets/images/epicode_logo.png);
   position: relative;
   width: 15em;
   height: 58px;
