@@ -19,9 +19,11 @@ hr {
 
 #your-feedback {
   background-color: transparent;
-  border: none;
-  text-align: left;
-  width: 500px;
+  border-bottom: 3px solid #c90fc3;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 1000px;
 }
 
 .rating-container {
