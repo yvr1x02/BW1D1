@@ -1,5 +1,16 @@
 body {
   background-image: url(..//assets/bg.jpg);
-  background-repeat: no-repeat; 
-  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 90px;
+}
+
+.logo {
+  background-image: url(..//assets/epicode_logo.png);
+  position: relative;
+  width: 97em;
+  height: 360px;
 }
