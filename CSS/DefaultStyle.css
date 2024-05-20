@@ -6,11 +6,33 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin: 90px;
+  color: aliceblue;
 }
 
-.logo {
-  background-image: url(..//assets/epicode_logo.png);
-  position: relative;
-  width: 97em;
-  height: 360px;
+
+ main{
+  font-size:large;
 }
+
+header{
+
+  margin-bottom: 5em;
+}
+
+
+.logo {
+  content: url(..//assets/epicode_logo.png);
+  position: relative;
+  width: 15em;
+  height: 58px;
+  
+}
+
+.title{
+
+font-size: 90px;
+margin-bottom: 50px;
+}
+
+
+
