@@ -7,10 +7,14 @@ body {
   margin-right: auto;
   margin: 90px;
   color: aliceblue;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  
 }
 
 main {
-  font-size: large;
+  font-size: 20px;
 }
 
 header {
@@ -23,3 +27,9 @@ header {
   width: 15em;
   height: 58px;
 }
+
+strong{
+  font-weight: 700;
+}
+
+

@@ -1,12 +1,14 @@
 .title {
   font-size: 100px;
   margin-bottom: 50px;
+  font-weight: 400;
 }
 
 .instructions {
   font-size: 50px;
   color: #d324a1;
   padding-bottom: 0.5em;
+  font-weight: 600;
 }
 
 .paragraph {
@@ -17,6 +19,7 @@
 .list {
   font-size: 25px;
   line-height: 1.5em;
+  padding-bottom: 100px;
 }
 
 .input {
@@ -28,8 +31,9 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
   vertical-align: bottom;
-  color: black;
+  color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.08);
+  
 }
 
 .button {
@@ -51,3 +55,9 @@ input[type="checkbox"] {
   text-align: right;
   margin-right: 3em;
 }
+
+.strong-Title{
+
+  font-weight: 800;
+}
+
