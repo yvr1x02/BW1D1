@@ -9,30 +9,17 @@ body {
   color: aliceblue;
 }
 
-
- main{
-  font-size:large;
+main {
+  font-size: large;
 }
 
-header{
-
+header {
   margin-bottom: 5em;
 }
-
 
 .logo {
   content: url(..//assets/epicode_logo.png);
   position: relative;
   width: 15em;
   height: 58px;
-  
 }
-
-.title{
-
-font-size: 90px;
-margin-bottom: 50px;
-}
-
-
-
