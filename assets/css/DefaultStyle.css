@@ -1,5 +1,5 @@
 body {
-  background-image: url(..//assets/bg.jpg);
+  background-image: url(../images/bg.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   background-size: cover;
@@ -10,7 +10,6 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
-  
 }
 
 main {
@@ -22,14 +21,12 @@ header {
 }
 
 .logo {
-  content: url(..//assets/epicode_logo.png);
+  content: url(../images/epicode_logo.png);
   position: relative;
   width: 15em;
   height: 58px;
 }
 
-strong{
+strong {
   font-weight: 700;
 }
-
-
