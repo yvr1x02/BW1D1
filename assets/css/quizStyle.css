@@ -1,98 +1,31 @@
-body{
-    text-align: center;
-}
-.cards{
-   border: 5px solid;
-   border-color: rgb(157, 162, 167);
-   width: 300px;
-  height: 75px;
-  margin: 10px auto;
-  text-align: center;
-  line-height: 70px;
-  border-radius: 50px;
-  margin: 200px;
-  display: inline-block;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  box-shadow: 10px;
-  border-style: outset;
-}
-footer{
-    margin-top: 120px;
-}
-.button{
-    margin-top: 50px;
-    font-size: 30px;
-    height: 60px;
-    width: 100px;
-    font-weight: 1000;
-    background-color: rgb(157, 162, 167);
-    border-radius: 10px;
-}
-.questions{
-    font-size: 50px;
-}
-h3{
-    font-size: xx-large;
-}
-
-header{
-    margin-bottom: 0;
-}
-
-#app{
-    margin-left: 90em;
-}
-
-.base-timer {
-  position: relative;
-  width: 200px;
-  height: 300px;
-}
-
-.base-timer__svg {
-  transform: scaleX(-1);
-}
-
-.base-timer__circle {
-  fill: none;
-  stroke: none;
-}
-
-.base-timer__path-elapsed {
-  stroke-width: 7px;
-  stroke: grey;
-}
-
-.base-timer__path-remaining {
-  stroke-width: 7px;
-  stroke-linecap: round;
-  transform: rotate(90deg);
-  transform-origin: center;
-  transition: 1s linear all;
-  fill-rule: nonzero;
-  stroke: currentColor;
-}
-
-.base-timer__path-remaining.green {
-  color: rgb(65, 184, 131);
-}
-
-.base-timer__path-remaining.orange {
-  color: orange;
-}
-
-.base-timer__path-remaining.red {
-  color: red;
-}
-
-.base-timer__label {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  top: 0;
-  display: flex;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
   align-items: center;
-  justify-content: center;
-  font-size: 40px;
+  height: 100vh;
+}
+
+#quiz-container {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+.selected {
+  background-color: violet;
 }
