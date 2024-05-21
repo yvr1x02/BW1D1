@@ -95,45 +95,45 @@ function shuffle(array) {
 }
 
 function loadQuestion(index) {
-  //caricamento domande
-  const question = questions[index]; //prendo domanda dall array
-  const questionContainer = document.querySelector(".question"); //creo variabile per il div
-  const questionTitle = questionContainer.querySelector("h3"); //creo variabile per l h3
-  const answersList = questionContainer.querySelector(".answers"); //creo variabile per la lista risposta
-  questionTitle.textContent = question.question; // prendo titolo e lo setto alla variabile
-  answersList.innerHTML = ""; // Resetta le risposte
+  const question = questions[index];
+  const questionContainer = document.querySelector(".question");
+  const questionTitle = questionContainer.querySelector("h3");
+  const answersList = questionContainer.querySelector(".answers");
+  questionTitle.textContent = question.question;
+  answersList.innerHTML = "";
   const allAnswers = [question.correct_answer, ...question.incorrect_answers];
-  shuffle(allAnswers); // Mescola le risposte
+  shuffle(allAnswers);
   allAnswers.forEach((answer) => {
-    //per ogni risposta creo:
-    const answerItem = document.createElement("li"); // creo lista
-    const answerLabel = document.createElement("label"); //creo label ( "contenitore" risposta)
-    const answerInput = document.createElement("input");
-    if (question.type === "multiple") {
-      answerInput.type = "radio";
-    } else {
-      answerInput.type = "checkbox";
-    }
-    answerInput.name = "answer";
-    answerInput.value = answer;
-    answerLabel.appendChild(answerInput);
-    answerLabel.appendChild(document.createTextNode(answer));
+    const answerItem = document.createElement("div");
+    const answerLabel = document.createElement("label");
+    answerLabel.classList.add("answer-label");
+    answerLabel.textContent = answer;
+    answerLabel.addEventListener("click", () => {
+      selectAnswer(answerLabel);
+    });
     answerItem.appendChild(answerLabel);
     answersList.appendChild(answerItem);
   });
   questionContainer.classList.remove("hidden");
 }
 
+function selectAnswer(answerLabel) {
+  const selectedAnswers = document.querySelectorAll(".selected");
+  selectedAnswers.forEach((item) => {
+    item.classList.remove("selected");
+  });
+  answerLabel.classList.add("selected");
+}
+
 function checkAnswer() {
-  const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+  const selectedAnswer = document.querySelector(".selected");
   if (!selectedAnswer) return null;
-  return selectedAnswer.value;
+  return selectedAnswer.textContent;
 }
 
 function showNextQuestion() {
   const answer = checkAnswer();
   if (answer === null) {
-    alert("Per favore, seleziona una risposta.");
     return;
   }
   const currentQuestionContainer = document.querySelector(".question");
@@ -141,18 +141,14 @@ function showNextQuestion() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     loadQuestion(currentQuestionIndex);
-  } else {
-    const score = checkScore();
-    const resultContainer = document.getElementById("result");
-    resultContainer.textContent = `Hai risposto correttamente a ${score} domande su ${questions.length}.`;
   }
 }
 
 function checkScore() {
   let score = 0;
   questions.slice(0, currentQuestionIndex + 1).forEach((question, index) => {
-    const selectedAnswer = document.querySelector(`input[name="answer"]:checked`);
-    if (selectedAnswer && selectedAnswer.value === question.correct_answer) {
+    const selectedAnswer = document.querySelector(`.selected`);
+    if (selectedAnswer && selectedAnswer.textContent === question.correct_answer) {
       score++;
     }
   });
@@ -162,5 +158,4 @@ function checkScore() {
 window.onload = function () {
   loadQuestion(currentQuestionIndex);
   document.getElementById("next-button").addEventListener("click", showNextQuestion);
-  startTimer();
 };
