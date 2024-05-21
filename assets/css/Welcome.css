@@ -36,7 +36,7 @@ input[type="checkbox"] {
   
 }
 
-.button {
+#myButton {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
   background-color: #09fbff;
@@ -44,6 +44,8 @@ input[type="checkbox"] {
   border-radius: 4px;
   text-align: right;
   color: #001941;
+  margin-left: 130em;
+  margin-top: 10em;
 }
 
 .glow-button:hover {
