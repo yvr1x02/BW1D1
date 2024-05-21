@@ -9,25 +9,16 @@
     <link rel="stylesheet" href="/assets/css/quizStyle.css" />
   </head>
   <body>
-    <header>
-      <div class="logo"></div>
-    </header>
-    <nav>
-      <div id="app"></div>
-    </nav>
-    <main>
-      <div class="questions"><p>domanda random</p></div>
-      <div class="cards"><p>risposta 1</p></div>
-      <div class="cards"><p>risposta 2</p></div>
-      <div class="cards"><p>risposta 3</p></div>
-      <div class="cards"><p>risposta 4</p></div>
-      <div>
-        <button class="button">next</button>
+    <div id="quiz-container">
+      <div class="question-container">
+        <div class="question hidden">
+          <h3></h3>
+          <ul class="answers"></ul>
+        </div>
       </div>
-    </main>
-    <footer>
-      <h3>QUESTION N.</h3>
-    </footer>
+      <button class="button" id="next-button">Avanti</button>
+    </div>
+    <div id="result"></div>
     <script src="/js/quiz.js"></script>
   </body>
 </html>
