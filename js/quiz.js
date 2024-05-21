@@ -138,6 +138,7 @@ function showNextQuestion() {
   if (answer === null) {
     return;
   }
+
   const currentQuestionContainer = document.querySelector(".question"); // prendo l'elemento con classe .question
   currentQuestionContainer.classList.add("hidden"); //aggiungo la classe hidden
   currentQuestionIndex++;
@@ -151,7 +152,7 @@ function checkScore() {
   let score = 0;
   questions.slice(0, currentQuestionIndex + 1).forEach((question, index) => {
     ///// da fixare
-    const selectedAnswer = document.querySelector(`.selected`);
+    const selectedAnswer = document.querySelector(".selected");
     if (selectedAnswer && selectedAnswer.textContent === question.correct_answer) {
       score++;
     }
