@@ -95,40 +95,42 @@ function shuffle(array) {
 }
 
 function loadQuestion(index) {
-  const question = questions[index];
-  const questionContainer = document.querySelector(".question");
-  const questionTitle = questionContainer.querySelector("h3");
-  const answersList = questionContainer.querySelector(".answers");
-  questionTitle.textContent = question.question;
-  answersList.innerHTML = "";
-  const allAnswers = [question.correct_answer, ...question.incorrect_answers];
-  shuffle(allAnswers);
+  const question = questions[index]; // prendo domanda singola
+  const questionContainer = document.querySelector(".question"); // prendo il container
+  const questionTitle = questionContainer.querySelector("h3"); // prendo il testo
+  const answersList = questionContainer.querySelector(".answers"); // prendo la posizione per le risposte
+  questionTitle.textContent = question.question; //assegno a question la domanda
+  answersList.innerHTML = ""; // svuoto le risposte
+  const allAnswers = [question.correct_answer, ...question.incorrect_answers]; //creo un array prendendo risposte corrette e errate
+  shuffle(allAnswers); // sfrutto la funzione precedentemente creata per randomizzare la posizione delle risposte
   allAnswers.forEach((answer) => {
-    const answerItem = document.createElement("div");
-    const answerLabel = document.createElement("label");
-    answerLabel.classList.add("answer-label");
-    answerLabel.textContent = answer;
+    // per ogni risposta dall array contentente tutte le risposte
+    const answerItem = document.createElement("div"); // creo un div contenitore per la risposta
+    const answerLabel = document.createElement("label"); //creo un label che contiene il testo
+    answerLabel.classList.add("answer-label"); // gli aggiungo la classe
+    answerLabel.textContent = answer; // aggiungo il testo della risposta nel label
     answerLabel.addEventListener("click", () => {
-      selectAnswer(answerLabel);
+      selectAnswer(answerLabel); //non appena clicco sulla risposta l'evidenzio e la seleziono
     });
-    answerItem.appendChild(answerLabel);
-    answersList.appendChild(answerItem);
+    answerItem.appendChild(answerLabel); // appendo la risposta al div
+    answersList.appendChild(answerItem); // appendo il div della risposta singola al div container
   });
-  questionContainer.classList.remove("hidden");
+  questionContainer.classList.remove("hidden"); //rimuovo la classe hidden per mostrare a schermo la domanda
 }
 
 function selectAnswer(answerLabel) {
-  const selectedAnswers = document.querySelectorAll(".selected");
+  const selectedAnswers = document.querySelectorAll(".selected"); // prendo tutti gli elementi contenenti .selected
   selectedAnswers.forEach((item) => {
+    // per ogni elemento selezionato rimuovo la classe selected
     item.classList.remove("selected");
   });
-  answerLabel.classList.add("selected");
+  answerLabel.classList.add("selected"); // aggiungo la classe all'elemento selezionato
 }
 
 function checkAnswer() {
-  const selectedAnswer = document.querySelector(".selected");
-  if (!selectedAnswer) return null;
-  return selectedAnswer.textContent;
+  const selectedAnswer = document.querySelector(".selected"); // prendo l'elemento selezionato
+  if (!selectedAnswer) return null; //se l'elemento non è selezionato ritorna null
+  return selectedAnswer.textContent; // se è selezionato ritorna il suo testo
 }
 
 function showNextQuestion() {
@@ -136,10 +138,11 @@ function showNextQuestion() {
   if (answer === null) {
     return;
   }
-  const currentQuestionContainer = document.querySelector(".question");
-  currentQuestionContainer.classList.add("hidden");
+  const currentQuestionContainer = document.querySelector(".question"); // prendo l'elemento con classe .question
+  currentQuestionContainer.classList.add("hidden"); //aggiungo la classe hidden
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
+    //se l'index è minore degli elementi dell array stampa un altra domanda
     loadQuestion(currentQuestionIndex);
   }
 }
@@ -147,6 +150,7 @@ function showNextQuestion() {
 function checkScore() {
   let score = 0;
   questions.slice(0, currentQuestionIndex + 1).forEach((question, index) => {
+    ///// da fixare
     const selectedAnswer = document.querySelector(`.selected`);
     if (selectedAnswer && selectedAnswer.textContent === question.correct_answer) {
       score++;
