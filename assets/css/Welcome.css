@@ -36,28 +36,30 @@ input[type="checkbox"] {
   
 }
 
-.button {
+#myButton {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
-  background-color: #09fbff;
-  padding: 15px 40px;
-  border-radius: 4px;
+  background-color: #00f9fd;
+  padding: 20px 70px;
+  border-radius: 2px;
   text-align: right;
-  color: #001941;
+  margin-left: 64em;
+  color: rgb(5, 42, 99);
+  box-shadow: 0 5px 30px rgba(2, 57, 129, 1);
+font-size: x-large;
+font-family: "Poppins", sans-serif;
+font-weight: 900;
+font-style: normal;
 }
 
-.glow-button:hover {
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 15px rgba(13, 223, 238, 0.4);
-}
 
-.btn-container {
-  text-align: right;
-  margin-right: 3em;
-}
 
 .strong-Title{
 
   font-weight: 800;
 }
 
+
+.buttonWelcome{
+  
+}

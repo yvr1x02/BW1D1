@@ -1,37 +1,59 @@
-body{
-    text-align: center;
+body {
+  text-align: center;
 }
-.cards{
-   border: 5px solid;
-   border-color: rgb(157, 162, 167);
-   width: 300px;
+main {
+  text-align: center;
+}
+
+#quiz-container {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  font-weight: 1000;
+  margin-top: 50px;
+  font-size: 30px;
+  height: 60px;
+  width: 150px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+.selected {
+  background-color: violet;
+}
+
+.answer-label {
+  border: 5px solid;
+  border-color: rgb(157, 162, 167);
+  width: 300px;
   height: 75px;
   margin: 10px auto;
   text-align: center;
   line-height: 70px;
   border-radius: 50px;
-  margin: 150px;
+  margin: 200px;
   display: inline-block;
   margin-bottom: 50px;
   margin-top: 50px;
   box-shadow: 10px;
   border-style: outset;
 }
-footer{
-    margin-top: 120px;
+
+.questions {
+  font-size: 50px;
 }
-.button{
-    margin-top: 50px;
-    font-size: 30px;
-    height: 60px;
-    width: 100px;
-    font-weight: 1000;
-    background-color: rgb(157, 162, 167);
-    border-radius: 10px;
-}
-.questions{
-    font-size: 50px;
-}
-h3{
-    font-size: xx-large;
+h3 {
+  font-size: xx-large;
 }
