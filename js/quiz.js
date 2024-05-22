@@ -84,6 +84,7 @@ const questions = [
 ];
 
 let currentQuestionIndex = 0;
+let correctAnswer = 0;
 
 function shuffle(array) {
   //randomizer domande
@@ -107,7 +108,8 @@ function loadQuestion(index) {
     // per ogni risposta dall array contentente tutte le risposte
     const answerItem = document.createElement("div"); // creo un div contenitore per la risposta
     const answerLabel = document.createElement("label"); //creo un label che contiene il testo
-    answerLabel.classList.add("answer-label"); // gli aggiungo la classe
+    answerItem.classList.add("answer-container"); // aggiungo classe al div
+    answerLabel.classList.add("answer-label"); //  aggiungo  classe al label
     answerLabel.textContent = answer; // aggiungo il testo della risposta nel label
     answerLabel.addEventListener("click", () => {
       selectAnswer(answerLabel); //non appena clicco sulla risposta l'evidenzio e la seleziono
@@ -139,6 +141,11 @@ function showNextQuestion() {
     return;
   }
 
+  const currentQuestion = questions[currentQuestionContainer];
+  if (answer === currentQuestion.correct_answer) {
+    correctAnswer++;
+  }
+
   const currentQuestionContainer = document.querySelector(".question"); // prendo l'elemento con classe .question
   currentQuestionContainer.classList.add("hidden"); //aggiungo la classe hidden
   currentQuestionIndex++;
@@ -146,18 +153,6 @@ function showNextQuestion() {
     //se l'index è minore degli elementi dell array stampa un altra domanda
     loadQuestion(currentQuestionIndex);
   }
-}
-
-function checkScore() {
-  let score = 0;
-  questions.slice(0, currentQuestionIndex + 1).forEach((question, index) => {
-    ///// da fixare
-    const selectedAnswer = document.querySelector(".selected");
-    if (selectedAnswer && selectedAnswer.textContent === question.correct_answer) {
-      score++;
-    }
-  });
-  return score;
 }
 
 window.onload = function () {
