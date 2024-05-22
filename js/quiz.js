@@ -120,7 +120,9 @@ function loadQuestion(index) {
   questionContainer.classList.remove("hidden"); //rimuovo la classe hidden per mostrare a schermo la domanda
 
   const questionCounter = document.querySelector(".questionCounter");
-  questionCounter.textContent = `Domanda ${index + 1} / 10 `;
+  questionCounter.innerHTML = `Domanda ${index + 1} <span class = "question-count"> / ${
+    questions.length
+  }</span> `;
 }
 
 function selectAnswer(answerLabel) {
@@ -162,13 +164,7 @@ function showNextQuestion() {
 }
 
 function showResult() {
-  const resultContainer = document.querySelector(".result"); // creo variabile classe result
-  const scoreP = resultContainer.querySelector(".score"); //  creo variabile score
-  scoreP.textContent = `Hai risposto correttamente a ${correctanswer} su ${questions.length}`;
-  resultContainer.classList.remove("hidden");
-
-  const questionCounter = document.querySelector(".questionCounter");
-  questionCounter.classList.add("hidden");
+  window.location.href = "Result.html";
 }
 
 window.onload = function () {
