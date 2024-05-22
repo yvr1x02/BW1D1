@@ -128,7 +128,7 @@ header {
   line-height: 60px;
 }
 
-.results-cake {
+.flexWrapper {
   --w: 200px;
   display: flex;
   width: var(--w);
@@ -165,6 +165,7 @@ header {
 }
 
 .results-cake:after {
+  
   --b: 50px;
   --c: #ff00bf;
   content: "";
