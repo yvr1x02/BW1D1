@@ -5,8 +5,6 @@ main {
   display: inline-block;
 }
 
-
-
 .button {
   padding: 10px 20px;
   font-size: 16px;
@@ -25,7 +23,7 @@ main {
   display: none;
 }
 .selected {
-  background-color: violet;
+  background-color: #97218b;
 }
 
 .answer-label {
@@ -53,11 +51,15 @@ h3 {
   margin-bottom: 2em;
 }
 
-.answer-container{
+.answer-container {
   display: inline-block;
 }
-.question-container{
+.question-container {
   width: 100em;
   display: inline-block;
   margin: 5em;
+}
+
+.question-count {
+  color: #97218b;
 }
