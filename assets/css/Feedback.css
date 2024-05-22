@@ -40,3 +40,28 @@ hr {
   font-size: 20px;
   font-style: italic;
 }
+.star{
+  display: inline-block;
+  margin-top: 4em;
+}
+.btn {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  border: solid 3px white;
+  width: fit-content;
+  padding: 25px 75px;
+  margin: auto;
+  margin-top: 30px;
+  background-color: rgba(0, 255, 255, 0.58);
+  margin-top: 4em;
+}
+.btn:hover {
+  box-shadow: 0px 0px 23px 2px rgba(0, 255, 255, 0.58);
+}
+
+.bold {
+  font-weight: 700;
+}
