@@ -1,0 +1,67 @@
+main {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 90px;
+  }
+  
+  .description {
+    font-size: 40px;
+    padding-top: 1em;
+  }
+  
+  hr {
+    color: red;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  
+  #your-feedback {
+    background-color: transparent;
+    border-bottom: 3px solid #c90fc3;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 1000px;
+  }
+  
+  .rating-container {
+    margin-top: 2em;
+  }
+  
+  .feedback {
+    font-size: 40px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  
+  #your-feedback::placeholder {
+    font-size: 20px;
+    font-style: italic;
+  }
+  .star{
+    display: inline-block;
+    margin-top: 4em;
+  }
+  .btn {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    border: solid 3px white;
+    width: fit-content;
+    padding: 25px 75px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgba(0, 255, 255, 0.58);
+    margin-top: 4em;
+  }
+  .btn:hover {
+    box-shadow: 0px 0px 23px 2px rgba(0, 255, 255, 0.58);
+  }
+  
+  .bold {
+    font-weight: 700;
+  }
