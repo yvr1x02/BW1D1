@@ -39,15 +39,19 @@ input[type="checkbox"] {
 #myButton {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
-  background-color: #09fbff;
-  padding: 15px 40px;
-  border-radius: 4px;
+  background-color: #00f9fd;
+  padding: 20px 70px;
+  border-radius: 2px;
   text-align: right;
-  margin-left: 130em;
+  margin-left: 64em;
   color: rgb(5, 42, 99);
-  box-shadow: 0 5px 20px rgba(0, 238, 255, 0.4);
-
+  box-shadow: 0 5px 30px rgba(2, 57, 129, 1);
+font-size: x-large;
+font-family: "Poppins", sans-serif;
+font-weight: 900;
+font-style: normal;
 }
+
 
 
 .strong-Title{
@@ -55,3 +59,7 @@ input[type="checkbox"] {
   font-weight: 800;
 }
 
+
+.buttonWelcome{
+  
+}

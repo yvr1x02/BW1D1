@@ -13,11 +13,11 @@ body {
 }
 
 main {
-  font-size: 20px;
+  font-size: 0px;
 }
 
 header {
-  margin-bottom: 5em;
+  margin-bottom: 0em;
 }
 
 .logo {
@@ -28,5 +28,5 @@ header {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
