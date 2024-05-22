@@ -84,7 +84,7 @@ const questions = [
 ];
 
 let currentQuestionIndex = 0;
-let correctAnswer = 0;
+let correctanswer = 0;
 
 function shuffle(array) {
   //randomizer domande
@@ -141,9 +141,10 @@ function showNextQuestion() {
     return;
   }
 
-  const currentQuestion = questions[currentQuestionContainer];
+  const currentQuestion = questions[currentQuestionIndex]; //prendo la domanda corrente
   if (answer === currentQuestion.correct_answer) {
-    correctAnswer++;
+    // se la risposta è uguale a quella esatta
+    correctanswer++; // aggiungi 1 al counter
   }
 
   const currentQuestionContainer = document.querySelector(".question"); // prendo l'elemento con classe .question
@@ -152,7 +153,16 @@ function showNextQuestion() {
   if (currentQuestionIndex < questions.length) {
     //se l'index è minore degli elementi dell array stampa un altra domanda
     loadQuestion(currentQuestionIndex);
+  } else {
+    showResult(); //altrimenti visualizza i risultati
   }
+}
+
+function showResult() {
+  const resultContainer = document.querySelector(".result"); // creo variabile classe result
+  const scoreP = resultContainer.querySelector(".score"); //  creo variabile score
+  scoreP.textContent = `Hai risposto correttamente a ${correctanswer} su ${questions.length}`;
+  resultContainer.classList.remove("hidden");
 }
 
 window.onload = function () {
