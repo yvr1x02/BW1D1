@@ -22,7 +22,7 @@
     <main>
       <div id="results"></div>
       <div>
-        <svg id="pieChart" width="200" height="200">
+        <svg id="pieChart" width="200" height="200" viewBox="0 0 200 200">
           <circle
             id="correctCircle"
             cx="100"
@@ -32,7 +32,7 @@
             stroke="#36A2EB"
             stroke-width="40"
             stroke-dasharray="502.4"
-            stroke-dashoffset="0"
+            transform="rotate(-90 100 100)"
           ></circle>
           <circle
             id="incorrectCircle"
@@ -43,12 +43,8 @@
             stroke="#FF6384"
             stroke-width="40"
             stroke-dasharray="502.4"
-            stroke-dashoffset="251.2"
+            transform="rotate(-90 100 100)"
           ></circle>
-          <text x="70" y="100" fill="#000" font-size="20"></text>
-          <text x="70" y="120" fill="#000" font-size="20"></text>
-          <text x="100" y="30" fill="#000" font-size="20"></text>
-          <text x="100" y="50" fill="#000" font-size="20"></text>
         </svg>
       </div>
 

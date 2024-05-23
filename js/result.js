@@ -18,23 +18,22 @@ window.onload = function () {
   wrongAnswer.textContent = "Wrong Answers: " + incorrectPercentage + "%";
   wrongDiv.appendChild(wrongAnswer);
   resultDiv.appendChild(wrongDiv);
+
   const totalLength = 502.4;
+  const correctLength = (correctPercentage / 100) * totalLength;
+  const incorrectLength = (incorrectPercentage / 100) * totalLength;
 
   const correctCircle = document.getElementById("correctCircle");
   const incorrectCircle = document.getElementById("incorrectCircle");
 
-  const correctOffset = totalLength * ((100 - correctPercentage) / 100);
-  const incorrectOffset = totalLength * ((100 - incorrectPercentage) / 100);
+  correctCircle.setAttribute("stroke-dasharray", `${correctLength} ${totalLength}`);
+  incorrectCircle.setAttribute("stroke-dasharray", `${incorrectLength} ${totalLength}`);
+  incorrectCircle.setAttribute("stroke-dashoffset", -correctLength);
+  const resultText = document.getElementById("resultText");
 
-  correctCircle.setAttribute("stroke-dashoffset", correctOffset);
-  correctCircle.setAttribute("stroke", "#36A2EB");
-  incorrectCircle.setAttribute("stroke-dashoffset", incorrectOffset);
-  incorrectCircle.setAttribute("stroke", "#FF6384");
-
-  console.log(correctCircle);
-  console.log(incorrectCircle);
-  console.log(correctOffset);
-  console.log(incorrectOffset);
-  console.log(correctPercentage);
-  console.log(incorrectPercentage);
+  if (correctPercentage > 60) {
+    resultText.textContent = "Hai passato il test";
+  } else {
+    resultText.textContent = "Non hai superato il test";
+  }
 };
