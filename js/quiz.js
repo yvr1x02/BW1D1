@@ -170,7 +170,11 @@ function showNextQuestion() {
 }
 
 function showResult() {
-  window.location.href = "Result.html";
+  const totalQuestions = questions.length;
+  const percentageCorrect = (correctanswer / totalQuestions) * 100;
+  const percentageIncorrect = 100 - percentageCorrect;
+  const resultPageURL = `Result.html?correct=${percentageCorrect}&incorrect=${percentageIncorrect}`;
+  window.location.href = resultPageURL;
 }
 
 window.onload = function () {
@@ -274,7 +278,6 @@ function calculateTimeFraction() {
 
 function setCircleDasharray() {
   const circleDasharray = `${(calculateTimeFraction() * FULL_DASH_ARRAY).toFixed(0)} 283`;
-  document
-    .getElementById("base-timer-path-remaining")
-    .setAttribute("stroke-dasharray", circleDasharray);
+  document.getElementById("base-timer-path-remaining");
+  document.setAttribute("stroke-dasharray", circleDasharray);
 }
