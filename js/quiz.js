@@ -124,14 +124,14 @@ function loadQuestion(index) {
     questions.length
   }</span> `;
 }
--function selectAnswer(answerLabel) {
+function selectAnswer(answerLabel) {
   const selectedAnswers = document.querySelectorAll(".selected"); // prendo tutti gli elementi contenenti .selected
   selectedAnswers.forEach((item) => {
     // per ogni elemento selezionato rimuovo la classe selected
     item.classList.remove("selected");
   });
   answerLabel.classList.add("selected"); // aggiungo la classe all'elemento selezionato
-};
+}
 
 function checkAnswer() {
   const selectedAnswer = document.querySelector(".selected"); // prendo l'elemento selezionato
