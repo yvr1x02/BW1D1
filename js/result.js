@@ -11,11 +11,11 @@ window.onload = function () {
   wrongDiv.classList.add("wrongdiv");
   const wrongAnswer = document.createElement("p");
 
-  correctAnswer.textContent = "Correct Answers: " + correctPercentage + "%";
+  correctAnswer.textContent = "Correct: " + correctPercentage + "%";
   correctDiv.appendChild(correctAnswer);
   resultDiv.appendChild(correctDiv);
 
-  wrongAnswer.textContent = "Wrong Answers: " + incorrectPercentage + "%";
+  wrongAnswer.textContent = "Wrong: " + incorrectPercentage + "%";
   wrongDiv.appendChild(wrongAnswer);
   resultDiv.appendChild(wrongDiv);
 
