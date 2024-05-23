@@ -120,17 +120,18 @@ function loadQuestion(index) {
   questionContainer.classList.remove("hidden"); //rimuovo la classe hidden per mostrare a schermo la domanda
 
   const questionCounter = document.querySelector(".questionCounter");
-  questionCounter.textContent = `Domanda ${index + 1} / 10 `;
+  questionCounter.innerHTML = `Domanda ${index + 1} <span class = "question-count"> / ${
+    questions.length
+  }</span> `;
 }
-
-function selectAnswer(answerLabel) {
+-function selectAnswer(answerLabel) {
   const selectedAnswers = document.querySelectorAll(".selected"); // prendo tutti gli elementi contenenti .selected
   selectedAnswers.forEach((item) => {
     // per ogni elemento selezionato rimuovo la classe selected
     item.classList.remove("selected");
   });
   answerLabel.classList.add("selected"); // aggiungo la classe all'elemento selezionato
-}
+};
 
 function checkAnswer() {
   const selectedAnswer = document.querySelector(".selected"); // prendo l'elemento selezionato
@@ -162,13 +163,7 @@ function showNextQuestion() {
 }
 
 function showResult() {
-  const resultContainer = document.querySelector(".result"); // creo variabile classe result
-  const scoreP = resultContainer.querySelector(".score"); //  creo variabile score
-  scoreP.textContent = `Hai risposto correttamente a ${correctanswer} su ${questions.length}`;
-  resultContainer.classList.remove("hidden");
-
-  const questionCounter = document.querySelector(".questionCounter");
-  questionCounter.classList.add("hidden");
+  window.location.href = "Result.html";
 }
 
 window.onload = function () {
