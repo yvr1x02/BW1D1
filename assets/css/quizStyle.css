@@ -2,7 +2,6 @@ body {
   text-align: center;
 }
 
-
 main {
   display: inline-block;
 }
@@ -26,7 +25,7 @@ main {
   display: none;
 }
 .selected {
-  background-color: #97218b;
+  background-color: #900080;
 }
 
 .answer-label {
