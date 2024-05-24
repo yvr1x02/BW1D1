@@ -27,6 +27,8 @@ window.onload = function () {
   const correctCircle = document.getElementById("correctCircle");
   const incorrectCircle = document.getElementById("incorrectCircle");
   const resultText = document.getElementById("resultText");
+  const resultP = document.getElementById("resultP");
+  resultText.classList.add("resultText");
 
   correctCircle.setAttribute("stroke-dasharray", `${correctLength} ${totalLength}`);
   incorrectCircle.setAttribute("stroke-dasharray", `${incorrectLength} ${totalLength}`);
@@ -34,9 +36,10 @@ window.onload = function () {
 
   if (correctPercentage >= 60) {
     resultText.textContent = "Hai passato il test";
+    resultP.textContent = "...";
   } else {
     resultText.textContent = "Non hai superato il test";
-    resultText.style.fontSize = "12px"
+    resultText.style.fontSize = "12px";
   }
 };
 
