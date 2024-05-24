@@ -1,3 +1,7 @@
+body{
+
+}
+
 .btn {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
@@ -47,4 +51,8 @@ padding-left: 73%;
   color: aliceblue;
   border: transparent; 
   font-size: x-large;
+}
+
+#resultText{
+
 }

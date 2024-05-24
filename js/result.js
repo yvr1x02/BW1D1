@@ -20,7 +20,7 @@ window.onload = function () {
   wrongAnswer.textContent = "Wrong: " + incorrectPercentage + "%";
   correctDiv.appendChild(wrongAnswer);
 
-  const totalLength = 502.4;
+  const totalLength = 502.9;
   const correctLength = (correctPercentage / 100) * totalLength;
   const incorrectLength = (incorrectPercentage / 100) * totalLength;
 
@@ -29,6 +29,8 @@ window.onload = function () {
   const resultText = document.getElementById("resultText");
   const resultP = document.getElementById("resultP");
   resultText.classList.add("resultText");
+ 
+
 
   correctCircle.setAttribute("stroke-dasharray", `${correctLength} ${totalLength}`);
   incorrectCircle.setAttribute("stroke-dasharray", `${incorrectLength} ${totalLength}`);
@@ -36,7 +38,9 @@ window.onload = function () {
 
   if (correctPercentage >= 60) {
     resultText.textContent = "Hai passato il test";
-    resultP.textContent = "...";
+    resultP.textContent = "We'll send you the certificate in few minutes"
+    resultP2.textContent = "Check your email (including promotions/spam)";
+    resultP3.textContent = "Congratulazioni!"
   } else {
     resultText.textContent = "Non hai superato il test";
     resultText.style.fontSize = "12px";
