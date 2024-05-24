@@ -36,6 +36,7 @@ window.onload = function () {
     resultText.textContent = "Hai passato il test";
   } else {
     resultText.textContent = "Non hai superato il test";
+    resultText.style.fontSize = "12px"
   }
 };
 

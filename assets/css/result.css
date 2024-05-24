@@ -41,3 +41,10 @@ padding-left: 73%;
 .grafico {
   text-align: center;
 }
+
+#btn{
+  background-color: transparent;
+  color: aliceblue;
+  border: transparent; 
+  font-size: x-large;
+}
