@@ -1,6 +1,8 @@
 body {
   text-align: center;
 }
+
+
 main {
   display: inline-block;
 }
@@ -17,6 +19,7 @@ main {
   width: 150px;
   border-radius: 10px;
   text-align: center;
+  color: rgb(0, 46, 87);
 }
 
 .hidden {
