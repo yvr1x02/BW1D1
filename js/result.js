@@ -19,7 +19,7 @@ window.onload = function () {
   wrongDiv.appendChild(wrongAnswer);
   resultDiv.appendChild(wrongDiv);
 
-  const totalLength = 502.7;
+  const totalLength = 503.0;
   const correctLength = (correctPercentage / 100) * totalLength;
   const incorrectLength = (incorrectPercentage / 100) * totalLength;
 
