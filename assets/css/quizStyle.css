@@ -71,7 +71,7 @@ h3 {
 }
 
 .base-timer__svg {
-  transform: scaleX(-1);
+  transform: scaleX(1);
 }
 
 .base-timer__circle {

@@ -16,8 +16,7 @@ window.onload = function () {
   resultDiv.appendChild(correctDiv);
 
   wrongAnswer.textContent = "Wrong: " + incorrectPercentage + "%";
-  wrongDiv.appendChild(wrongAnswer);
-  resultDiv.appendChild(wrongDiv);
+  correctDiv.appendChild(wrongAnswer);
 
   const totalLength = 502.4;
   const correctLength = (correctPercentage / 100) * totalLength;
