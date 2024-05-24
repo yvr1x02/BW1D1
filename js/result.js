@@ -26,17 +26,19 @@ window.onload = function () {
 
   const correctCircle = document.getElementById("correctCircle");
   const incorrectCircle = document.getElementById("incorrectCircle");
-  const correctText = document.getElementById("correctText");
-  const wrongText = document.getElementById("incorrectText");
   const resultText = document.getElementById("resultText");
 
   correctCircle.setAttribute("stroke-dasharray", `${correctLength} ${totalLength}`);
   incorrectCircle.setAttribute("stroke-dasharray", `${incorrectLength} ${totalLength}`);
   incorrectCircle.setAttribute("stroke-dashoffset", -correctLength);
 
-  if (correctPercentage > 60) {
+  if (correctPercentage >= 60) {
     resultText.textContent = "Hai passato il test";
   } else {
     resultText.textContent = "Non hai superato il test";
   }
 };
+
+function redirectToAnotherPage() {
+  window.location.href = "/Feedback.html";
+}

@@ -51,13 +51,15 @@
             stroke-dasharray="502.4"
             transform="rotate(-90 100 100)"
           ></circle>
-          <text id="" x="50" y="100" fill="#000" font-size="20"></text>
-          <text id="" x="50" y="100" fill="#000" font-size="20"></text>
-          <text id="" x="50" y="100" fill="#000" font-size="20"></text>
+          <text id="correctText" x="50" y="100" fill="#000" font-size="15"></text>
+          <text id="incorrectText" x="50" y="100" fill="#000" font-size="15"></text>
+          <text id="resultText" x="50" y="100" fill="#000" font-size="15"></text>
         </svg>
       </div>
 
-      <div class="btn bold">RATE US</div>
+      <div class="btn bold">
+        <button id="btn" onclick="redirectToAnotherPage()">RATE US</button>
+      </div>
     </main>
 
     <script src="/js/result.js"></script>
