@@ -47,5 +47,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  setRating(currentRating);
+  const button = document.getElementById("rate-button");
+  const feedback = document.getElementById("your-feedback");
+
+  button.addEventListener("click", function () {
+    alert("Thank you for your feedback!");
+
+    feedback.value = "";
+    currentRating = 0;
+    setRating(currentRating);
+  });
 });

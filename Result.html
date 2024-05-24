@@ -4,62 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./assets/css/result.css">
-    <link rel="stylesheet" href="./assets/css/DefaultStyle.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-  
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/result.css" />
+    <link rel="stylesheet" href="./assets/css/DefaultStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container-main">
-      <div class="header">
-        <div class="logo">
-          <a href="https://epicode.com/">
-          <img src="./assets/epicode_logo.png" alt="epicode_logo" />
-          </a>
+    <header>
+      <div class="logo"></div>
+    </header>
+    <main>
+      <section class="result-title">
+        <div>
+          <h1>Results</h1>
+          <p>The summary of your answers:</p>
         </div>
-        <div class="timer"></div>
+      </section>
+
+      <div id="results"></div>
+      <div class="grafico">
+        <svg id="pieChart" width="500" height="500" viewBox="0 0 200 200">
+          <circle
+            id="correctCircle"
+            cx="100"
+            cy="100"
+            r="80"
+            fill="none"
+            stroke="#00fcf2"
+            stroke-width="25"
+            stroke-dasharray="502.4"
+            transform="rotate(-90 100 100)"
+          ></circle>
+          <circle
+            id="incorrectCircle"
+            cx="100"
+            cy="100"
+            r="80"
+            fill="none"
+            stroke="#b6006b"
+            stroke-width="26"
+            stroke-dasharray="502.4"
+            transform="rotate(-90 100 100)"
+          ></circle>
+          <text id="correctText" x="40" y="90" fill="#000" font-size="15"></text>
+          <text id="incorrectText" x="40" y="90" fill="#000" font-size="15"></text>
+          <text id="resultText" x="40" y="90" fill="#8ad6e4" font-size="15" ></text>
+          <text id="resultP" x="44" y="120" fill="#FFFFFF" font-size="6" ></text>
+          <text id="resultP2" x="40" y="110" fill="#FFFFFF" font-size="6" ></text>
+          <text id="resultP3" x="50" y="70" fill="#FFFFFF" font-size="14" ></text>
+        </svg>
       </div>
-      <div class="a-container">
-    </div>
 
-    <div class="a-container" id="content">
-      <main class="main-results">
-  
-          <div class="main-title">
-              <h3 class="title-font bold">Results</h3>
-              <p class="text-font subtitle">The summary of your answers:</p>
-          </div>
-  
-          <div class="flex-content">
-              <div class="flex-auto correct-answers">
-                  <p class="title-font line-height">Correct</p>
-                  <p class="title-font bold line-height" id="percentualeCorrette">66.7%</p>
-                  <p class="text-font" id="risposteCorrette">4/6 questions</p>
-              </div>
-              <div class="results-cake flex-auto inter-font">
-                  <p>
-                      <span class="congrats bold" id="esitoEsame">Congratulations! </span> <br> 
-                      <span class="color-azzurro bold" id="esitoDescrizione">You passed the exam.</span>
-                      <span class="certificate-notice" id="esitoTesto">We'll send you the certificate in few minutes. <br> Check your email (including promotion / spam folder)</span>
-                  </p>
-              </div>
-              <div class="flex-auto wrong-answers">
-                  <p class="title-font line-height">Wrong</p>
-                  <p class="title-font line-height bold" id="percentualeErrate">33.3%</p>
-                  <p class="text-font" id="risposteErrate">2/6 questions</p>
-              </div>
-          </div>
-  
-          <div class="btn bold">
-              RATE US
-          </div>
-  
-      </main>
-  </div>
+      <div class="btn bold">
+        <button id="btn" onclick="redirectToAnotherPage()">RATE US</button>
+      </div>
+    </main>
 
-<script src="./rew.js"></script>
+    <script src="/js/result.js"></script>
   </body>
 </html>

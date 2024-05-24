@@ -1,220 +1,5 @@
-:root {
-  --blue: #00ffff;
-  --red: #d20094;
-}
+body{
 
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
-p {
-  line-height: 1.3rem;
-}
-
-.container-main {
-  box-sizing: border-box;
-  padding: 30px 80px;
-  height: inherit;
-  color: white;
-  font-family: "Inter", sans-serif;
-  background-image: url(../assets/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.container h3,
-.container h4 {
-  font-family: "Outfit", sans-serif;
-}
-
-.header {
-  margin-bottom: 30px;
-  display: flex;
-}
-
-.logo img {
-  width: 150px;
-}
-
-/*general*/
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
-/*body*/
-
-body {
-  background-image: url(../assets/bg.jpg);
-  background-size: cover;
-  color: white;
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  scroll-behavior: smooth;
-}
-
-.title-font {
-  font-size: 60px;
-  margin: 10px 0;
-}
-
-.inter-font {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "slnt" 0;
-  font-size: 16px;
-}
-
-/*header*/
-
-header {
-  margin: 30px 0;
-  padding: 0 100px;
-}
-
-.logo {
-  width: 150px;
-}
-
-/*main*/
-
-.main-title {
-  text-align: center;
-  margin: auto;
-  margin-bottom: 100px;
-}
-
-.subtitle {
-  font-size: 24px;
-}
-
-.flex-content {
-  display: flex;
-  margin: 50px;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.flex-auto {
-  flex: auto;
-  text-align: center;
-}
-
-.correct-answers {
-  text-align: left;
-  margin-bottom: 30px;
-  max-width: 180px;
-}
-
-.wrong-answers {
-  text-align: right;
-  margin-bottom: 30px;
-  max-width: 180px;
-}
-
-.line-height {
-  line-height: 60px;
-}
-
-.results-cake {
-  --w: 200px;
-  display: flex;
-  width: var(--w);
-  max-width: 400px;
-  min-width: 400px;
-  aspect-ratio: 1;
-  position: relative;
-  padding: 70px;
-  margin-bottom: 15px;
-  aspect-ratio: 1 / 1;
-  letter-spacing: 1px;
-  align-items: center;
-  justify-content: center;
-  line-height: 18px;
-  border-radius: 50%;
-  box-shadow: 10px 10px 25px rgb(0 0 0 / 50%);
-}
-
-.results-cake:before {
-  --p: 100;
-  --b: 50px;
-  --c: #00ffff;
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  inset: 0;
-  background: conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
-  -webkit-mask: radial-gradient(
-    farthest-side,
-    #0000 calc(99% - var(--b)),
-    #000 calc(100% - var(--b))
-  );
-  mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
-}
-
-.results-cake:after {
-  --b: 50px;
-  --c: #ff00bf;
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  inset: 0;
-  background: conic-gradient(var(--c) calc(var(--punteggio) * 1%), #0000 0);
-  -webkit-mask: radial-gradient(
-    farthest-side,
-    #0000 calc(99% - var(--b)),
-    #000 calc(100% - var(--b))
-  );
-  mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
-}
-
-.congrats {
-  font-size: 16px;
-}
-
-#esitoEsame,
-#esitoDescrizione {
-  font-size: 1.2rem;
-}
-
-#esitoTesto {
-  margin-top: 25px;
-}
-
-.color-azzurro {
-  color: #00ffff;
-}
-
-.results-text {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "slnt" 0;
-  font-size: 16px;
-}
-
-.certificate-notice {
-  display: inline-block;
-  margin: 10px 0;
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "slnt" 0;
-  font-size: 14px;
 }
 
 .btn {
@@ -227,7 +12,7 @@ header {
   width: fit-content;
   padding: 25px 75px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .btn:hover {
@@ -236,4 +21,38 @@ header {
 
 .bold {
   font-weight: 700;
+}
+.result-title {
+  text-align: center;
+  font-size: 27px;
+}
+
+.correctdiv {
+  font-size: 40px;
+  text-align: left;
+}
+
+.wrongP{
+display: inline;
+padding-left: 73%;
+}
+
+.correctP{
+  display: inline;
+  padding-left: 2%
+}
+
+.grafico {
+  text-align: center;
+}
+
+#btn{
+  background-color: transparent;
+  color: aliceblue;
+  border: transparent; 
+  font-size: x-large;
+}
+
+#resultText{
+
 }

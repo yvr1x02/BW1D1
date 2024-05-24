@@ -170,7 +170,11 @@ function showNextQuestion() {
 }
 
 function showResult() {
-  window.location.href = "Result.html";
+  const totalQuestions = questions.length;
+  const percentageCorrect = (correctanswer / totalQuestions) * 100;
+  const percentageIncorrect = 100 - percentageCorrect;
+  const resultPageURL = `Result.html?correct=${percentageCorrect}&incorrect=${percentageIncorrect}`;
+  window.location.href = resultPageURL;
 }
 
 window.onload = function () {
@@ -178,9 +182,11 @@ window.onload = function () {
   document.getElementById("next-button").addEventListener("click", showNextQuestion);
 };
 
-const FULL_DASH_ARRAY = 283;
-const WARNING_THRESHOLD = 10;
-const ALERT_THRESHOLD = 5;
+const TIME_LIMIT = 20;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = "green";
 
 const COLOR_CODES = {
   info: {
@@ -188,19 +194,15 @@ const COLOR_CODES = {
   },
   warning: {
     color: "orange",
-    threshold: WARNING_THRESHOLD,
+    threshold: 10,
   },
   alert: {
     color: "red",
-    threshold: ALERT_THRESHOLD,
+    threshold: 5,
   },
 };
 
-const TIME_LIMIT = 20;
-let timePassed = 0;
-let timeLeft = TIME_LIMIT;
-let timerInterval = null;
-let remainingPathColor = COLOR_CODES.info.color;
+const FULL_DASH_ARRAY = 283;
 
 document.getElementById("app").innerHTML = `
 <div class="base-timer">
@@ -228,12 +230,12 @@ startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
-  showNextQuestion();
+  showNextQuestion(loadQuestion());
 }
 
 function startTimer() {
   timerInterval = setInterval(() => {
-    timePassed = timePassed += 1;
+    timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
     document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
     setCircleDasharray();
@@ -258,12 +260,14 @@ function formatTime(time) {
 
 function setRemainingPathColor(timeLeft) {
   const { alert, warning, info } = COLOR_CODES;
+  const pathElement = document.getElementById("base-timer-path-remaining");
+
   if (timeLeft <= alert.threshold) {
-    document.getElementById("base-timer-path-remaining").classList.remove(warning.color);
-    document.getElementById("base-timer-path-remaining").classList.add(alert.color);
+    pathElement.classList.remove(warning.color);
+    pathElement.classList.add(alert.color);
   } else if (timeLeft <= warning.threshold) {
-    document.getElementById("base-timer-path-remaining").classList.remove(info.color);
-    document.getElementById("base-timer-path-remaining").classList.add(warning.color);
+    pathElement.classList.remove(info.color);
+    pathElement.classList.add(warning.color);
   }
 }
 
